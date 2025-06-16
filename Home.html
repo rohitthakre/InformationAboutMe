@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bio Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #333;
+        }
+        .section-padding {
+            padding: 4rem 1rem; /* Adjust padding for sections */
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 4rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-blue-600 to-indigo-700 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <!-- Brand/Logo -->
+            <a href="#" class="text-white text-3xl font-bold rounded-lg px-3 py-1 hover:text-gray-200 transition duration-300">MyPortfolio</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="text-white lg:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div id="nav-links" class="hidden w-full lg:flex lg:w-auto lg:items-center">
+                <a href="#home" class="block lg:inline-block text-white hover:bg-white hover:text-blue-700 px-4 py-2 rounded-lg text-lg font-medium transition duration-300 m-1">Home</a>
+                <a href="#about" class="block lg:inline-block text-white hover:bg-white hover:text-blue-700 px-4 py-2 rounded-lg text-lg font-medium transition duration-300 m-1">About</a>
+                <a href="#projects" class="block lg:inline-block text-white hover:bg-white hover:text-blue-700 px-4 py-2 rounded-lg text-lg font-medium transition duration-300 m-1">Projects</a>
+                <a href="#academic" class="block lg:inline-block text-white hover:bg-white hover:text-blue-700 px-4 py-2 rounded-lg text-lg font-medium transition duration-300 m-1">Academic</a>
+                <a href="#experience" class="block lg:inline-block text-white hover:bg-white hover:text-blue-700 px-4 py-2 rounded-lg text-lg font-medium transition duration-300 m-1">Experience</a>
+                <a href="#contact" class="block lg:inline-block text-white hover:bg-white hover:text-blue-700 px-4 py-2 rounded-lg text-lg font-medium transition duration-300 m-1">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section-padding bg-white flex flex-col items-center justify-center text-center rounded-b-2xl shadow-lg">
+        <div class="max-w-4xl mx-auto p-6">
+            <img src="https://placehold.co/150x150/ADD8E6/FFFFFF?text=Profile" alt="Profile Picture" class="rounded-full w-40 h-40 mx-auto mb-6 border-4 border-blue-500 shadow-md">
+            <h1 class="text-5xl font-extrabold text-blue-700 mb-4 leading-tight">Hello, I'm <span class="text-indigo-600">John Doe</span></h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                A passionate Web Developer with a knack for creating dynamic and responsive web applications.
+                Welcome to my digital space!
+            </p>
+            <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-gray-50 rounded-2xl shadow-lg mt-8 mx-4 lg:mx-auto max-w-6xl">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-lg text-gray-700 space-y-4">
+                    <p>
+                        Hi, I'm John Doe, a dedicated web developer with over 5 years of experience in building high-quality, scalable, and user-friendly web solutions. My journey in the tech world began with a fascination for how websites are built, leading me to master various front-end and back-end technologies.
+                    </p>
+                    <p>
+                        I specialize in modern JavaScript frameworks like **React** and **Vue.js**, and I have a strong foundation in **HTML5**, **CSS3**, and **responsive design**. On the server-side, I'm proficient with **Node.js** and **Python (Django/Flask)**, often working with databases like **MongoDB** and **PostgreSQL**.
+                    </p>
+                    <p>
+                        Beyond coding, I am a firm believer in continuous learning and staying updated with the latest industry trends. I enjoy tackling complex problems and collaborating with teams to deliver impactful products.
+                    </p>
+                </div>
+                <div class="relative group">
+                    <img src="https://placehold.co/600x400/9BB0C1/FFFFFF?text=Coding+Image" alt="About Me Image" class="rounded-lg shadow-xl transform transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-blue-500 opacity-20 rounded-lg group-hover:opacity-0 transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-white rounded-2xl shadow-lg mt-8 mx-4 lg:mx-auto max-w-6xl">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-3">E-commerce Platform</h3>
+                    <p class="text-gray-700 mb-4">
+                        Developed a full-stack e-commerce site with user authentication, product listings,
+                        shopping cart, and payment gateway integration.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-200 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">React</span>
+                        <span class="bg-green-200 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Node.js</span>
+                        <span class="bg-red-200 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded-full">MongoDB</span>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">View Project &rarr;</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Task Management App</h3>
+                    <p class="text-gray-700 mb-4">
+                        A responsive task management application with real-time updates and user collaboration features.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-purple-200 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Vue.js</span>
+                        <span class="bg-yellow-200 text-yellow-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Firebase</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">View Project &rarr;</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Personal Blog</h3>
+                    <p class="text-gray-700 mb-4">
+                        Designed and developed a personal blog platform with markdown support and commenting system.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pink-200 text-pink-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Django</span>
+                        <span class="bg-teal-200 text-teal-800 text-sm font-medium px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                        <span class="bg-orange-200 text-orange-800 text-sm font-medium px-2.5 py-0.5 rounded-full">HTML/CSS</span>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">View Project &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Section -->
+    <section id="academic" class="section-padding bg-gray-50 rounded-2xl shadow-lg mt-8 mx-4 lg:mx-auto max-w-6xl">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">Academic Background</h2>
+            <div class="space-y-8">
+                <!-- Education 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-2">Master of Science in Computer Science</h3>
+                    <p class="text-gray-700 text-lg mb-1">Stanford University</p>
+                    <p class="text-gray-600 text-md italic">Sep 2020 - May 2022</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+                        <li>Specialization in Web Technologies and Distributed Systems.</li>
+                        <li>Relevant Coursework: Advanced Web Development, Database Systems, Machine Learning.</li>
+                        <li>Thesis: "Scalable Real-time Web Applications using WebSockets."</li>
+                    </ul>
+                </div>
+
+                <!-- Education 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-500 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-2">Bachelor of Technology in Information Technology</h3>
+                    <p class="text-gray-700 text-lg mb-1">Indian Institute of Technology Bombay</p>
+                    <p class="text-gray-600 text-md italic">Jul 2016 - May 2020</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+                        <li>Graduated with Honors.</li>
+                        <li>Key subjects: Data Structures, Algorithms, Object-Oriented Programming.</li>
+                        <li>Participated in several coding competitions and hackathons.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding bg-white rounded-2xl shadow-lg mt-8 mx-4 lg:mx-auto max-w-6xl">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">Work Experience</h2>
+            <div class="space-y-8">
+                <!-- Experience 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-indigo-500 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-2">Senior Software Engineer</h3>
+                    <p class="text-gray-700 text-lg mb-1">Google Inc.</p>
+                    <p class="text-gray-600 text-md italic">Jun 2022 - Present</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+                        <li>Led the front-end development of a new internal productivity tool used by 10,000+ employees.</li>
+                        <li>Optimized application performance, reducing load times by 30%.</li>
+                        <li>Mentored junior developers and conducted code reviews.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-purple-500 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-2">Software Developer</h3>
+                    <p class="text-gray-700 text-lg mb-1">Tech Innovations Ltd.</p>
+                    <p class="text-gray-600 text-md italic">Jul 2020 - May 2022</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+                        <li>Developed and maintained features for a client-facing SaaS product.</li>
+                        <li>Collaborated with design and product teams to translate requirements into technical solutions.</li>
+                        <li>Implemented RESTful APIs using Node.js and Express.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gray-50 rounded-2xl shadow-lg mt-8 mx-4 lg:mx-auto max-w-6xl mb-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-12">Get In Touch</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                Have a question or want to work together? Feel free to reach out through the channels below.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:your.email@example.com" class="flex items-center bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    Email Me
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="flex items-center bg-indigo-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A2.5 2.5 0 001 4.5v17A2.5 2.5 0 003.5 24h17a2.5 2.5 0 002.5-2.5v-17A2.5 2.5 0 0020.5 2zM8 21H5V9h3zM6.5 7A1.5 1.5 0 118 5.5 1.5 1.5 0 016.5 7zm13 14h-3v-5a3 3 0 00-3-3 3 3 0 00-3 3v5h-3V9h3v1.5a3.5 3.5 0 013-1.5c3.5 0 4 2 4 5z"></path></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="flex items-center bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-900 transition duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.417 2.871 8.167 6.84 9.475.5.09.683-.217.683-.483 0-.237-.008-.867-.013-1.72-2.782.605-3.37-.998-3.37-.998-.455-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.607.069-.607 1.002-.07 1.53.992 1.53.992.89 1.528 2.336 1.087 2.903.83.09-.645.348-1.087.635-1.338-2.22-.25-4.555-1.11-4.555-4.945 0-1.09.39-1.983 1.026-2.677-.103-.25-.445-1.264.098-2.632 0 0 .84-.268 2.75 1.025A9.564 9.564 0 0112 6.878c.85.006 1.7.11 2.502.323 1.908-1.293 2.747-1.025 2.747-1.025.543 1.368.202 2.382.098 2.632.64.694 1.024 1.587 1.024 2.677 0 3.845-2.338 4.69-4.562 4.937.359.309.68.92.68 1.855 0 1.338-.013 2.417-.013 2.747 0 .267.18.577.688.483C21.134 20.137 24 16.386 24 11.97 24 6.463 19.522 2 14 2h-2z" clip-rule="evenodd"></path></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6 text-center rounded-t-2xl mt-8">
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu after clicking a link
+                if (window.innerWidth < 1024) { // Only for smaller screens
+                    const navLinks = document.getElementById('nav-links');
+                    navLinks.classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const navLinks = document.getElementById('nav-links');
+
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside (optional, but good UX)
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !menuButton.contains(event.target) && !navLinks.classList.contains('hidden')) {
+                navLinks.classList.add('hidden');
+            }
+        });
+
+    </script>
+</body>
+</html>
